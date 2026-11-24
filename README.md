@@ -1,8 +1,8 @@
-![BTWN for Windows — sync local Codex chats between a desktop and a laptop](assets/btwn-cover.svg)
+![BTWN — PC-to-PC sync for local Codex projects](assets/btwn-cover.svg)
 
 # BTWN
 
-Pick up a Codex conversation on your laptop where you left it on your desktop. BTWN transfers saved chats, their project sidebar, and optional project files directly between two Windows PCs on the same private network. After a completed transfer, you can switch the sending PC off and open the local copy on the other computer.
+**PC-to-PC sync for local Codex projects.** Open a project on either Windows PC and pick up where you left off. BTWN transfers the project's saved chats and sidebar organization over your local network. Turn on **Include project files** to bring the working files too. Once the transfer completes, you can work on the receiving PC with the other PC switched off.
 
 **[Download the Windows x64 installer](https://github.com/iaMO3/BTWN/releases/latest)** · [First-time setup](#first-time-setup) · [Troubleshooting](#troubleshooting)
 
@@ -10,15 +10,15 @@ Pick up a Codex conversation on your laptop where you left it on your desktop. B
 
 1. **Install on both PCs.** Run the Windows x64 MSI on each. Open the Codex desktop app at least once on both computers and have a saved local chat on each. Use the same up-to-date Codex version for your first transfer.
 2. **Pair once.** Open BTWN on the same private Wi-Fi or wired LAN. On one PC, click **Create pairing file**. Send that JSON privately to your other PC, then click **Open pairing file** there. Anyone with the file has the credential for that pair. The PC that creates it hosts the connection.
-3. **Choose what to send.** Fully quit Codex or ChatGPT on both PCs, including the tray. Leave BTWN open on both. On the PC with the history you want, select **Send**. Turn on **Include project files** if you also want the files behind those chats.
+3. **Choose what to send.** Fully quit Codex or ChatGPT on both PCs, including the tray. Leave BTWN open on both. On the PC with the projects you want to transfer, select **Send**. Keep **Include project files** on to copy missing files from the local project folders.
 4. **Click Start sync.** Both windows show transfer progress. When the receiver confirms completion, reopen Codex there and check the latest message in a familiar chat. If BTWN flags items for review, open **Settings → Transfers → Open received files**.
 
 ## Pick a direction
 
 | From the PC in front of you | What happens |
 | --- | --- |
-| **Send** | Makes the sender's saved conversation the active version of a shared chat on the other PC when it can do so safely. |
-| **Receive** | Pulls the other PC's saved chats onto this one. |
+| **Send** | Sends local Codex projects and their chats from this PC to the paired PC. |
+| **Receive** | Brings the paired PC's local Codex projects and chats onto this one. |
 | **Automatic** | Checks both ways about every two minutes while BTWN is open. Divergent histories are kept for review. |
 
 Use **Pause sync** on either computer to pause the pair. Resume from either window.

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
   <title id="title">BTWN for Windows</title>
-  <desc id="desc">A desktop and a laptop exchanging local Codex chats over Wi-Fi.</desc>
+  <desc id="desc">Two Windows PCs exchanging local Codex projects in either direction.</desc>
   <defs>
     <linearGradient id="bg" x2="1" y2=".28" gradientUnits="objectBoundingBox">
       <stop stop-color="#101825"/><stop offset=".6" stop-color="#132940"/><stop offset="1" stop-color="#153653"/>
@@ -17,14 +17,14 @@
   </g>
   <g font-family="Segoe UI,Arial,sans-serif">
     <text x="122" y="98" font-size="43" letter-spacing="7" fill="#f7faff">BTWN</text>
-    <text x="52" y="168" font-size="30" fill="#f1f6ff">Take your Codex chats with you.</text>
-    <text x="54" y="207" font-size="19" fill="#bdd0e4">Desktop to laptop, over your local network.</text>
+    <text x="52" y="168" font-size="30" fill="#f1f6ff">Sync local Codex projects.</text>
+    <text x="54" y="207" font-size="19" fill="#bdd0e4">PC to PC, over Wi-Fi or wired LAN.</text>
   </g>
   <g fill="url(#screen)" stroke="#cee5ff" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round">
     <rect x="628" y="97" width="116" height="72" rx="8"/>
     <path d="M686 170v13m-21 3h42" fill="none"/>
-    <rect x="931" y="101" width="99" height="62" rx="6"/>
-    <path d="M930 166h101l11 12H920z"/>
+    <rect x="925" y="97" width="116" height="72" rx="8"/>
+    <path d="M983 170v13m-21 3h42" fill="none"/>
   </g>
   <g stroke="#86c1ff" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M773 127h124l-9-8m9 8-9 8M898 149H774l9-8m-9 8 9 8"/>
