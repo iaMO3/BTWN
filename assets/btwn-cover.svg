@@ -1,32 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
-  <title id="title">BTWN for Windows</title>
-  <desc id="desc">Two Windows PCs exchanging local Codex projects in either direction.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1120" height="368" viewBox="0 0 1120 368" role="img" aria-labelledby="title desc">
+  <title id="title">BTWN · Pick up on your other PC.</title>
+  <desc id="desc">Two interlocking blue and silver links. BTWN syncs local Codex projects between Windows PCs.</desc>
   <defs>
-    <linearGradient id="bg" x2="1" y2=".28" gradientUnits="objectBoundingBox">
-      <stop stop-color="#101825"/><stop offset=".6" stop-color="#132940"/><stop offset="1" stop-color="#153653"/>
-    </linearGradient>
-    <radialGradient id="glow"><stop stop-color="#3c92f5" stop-opacity=".25"/><stop offset="1" stop-color="#3c92f5" stop-opacity="0"/></radialGradient>
-    <linearGradient id="screen" x2="1" y2="1"><stop stop-color="#23476e"/><stop offset="1" stop-color="#142438"/></linearGradient>
-    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#8ebde8" opacity=".16"/></pattern>
+    <linearGradient id="field" x2="1" y2=".35"><stop stop-color="#f8f9fc"/><stop offset="1" stop-color="#e5edf9"/></linearGradient>
+    <radialGradient id="aura"><stop stop-color="#e3f0ff"/><stop offset="1" stop-color="#e3f0ff" stop-opacity="0"/></radialGradient>
+    <linearGradient id="blue" x1=".15" y1=".02" x2=".9" y2="1"><stop stop-color="#abdfff"/><stop offset=".18" stop-color="#74c0ff"/><stop offset=".46" stop-color="#268afc"/><stop offset=".74" stop-color="#0b5bdb"/><stop offset="1" stop-color="#244ab9"/></linearGradient>
+    <linearGradient id="blueSide" x2=".5" y2="1"><stop stop-color="#458aca"/><stop offset=".6" stop-color="#0b468e"/><stop offset="1" stop-color="#102a64"/></linearGradient>
+    <linearGradient id="pale" x1=".08" y1="1" x2=".88" y2="0"><stop stop-color="#829bbd"/><stop offset=".33" stop-color="#cbd9e9"/><stop offset=".59" stop-color="#f4f9ff"/><stop offset=".82" stop-color="#b0c8e5"/><stop offset="1" stop-color="#e9f4ff"/></linearGradient>
+    <linearGradient id="paleSide" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8da8cb"/><stop offset="1" stop-color="#506787"/></linearGradient>
+    <filter id="soft" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="12"/></filter>
+    <rect id="r1" x="-145" y="-94" width="206" height="137" rx="42"/>
+    <rect id="r2" x="-42" y="-33" width="209" height="135" rx="42"/>
+    <clipPath id="cross"><path d="M-78 12H-8V76h-70z"/></clipPath>
+    <clipPath id="outer"><rect x=".5" y=".5" width="1119" height="367" rx="28"/></clipPath>
   </defs>
-  <rect width="1120" height="270" rx="20" fill="url(#bg)"/>
-  <rect x="558" width="549" height="266" rx="18" fill="url(#grid)"/>
-  <ellipse cx="820" cy="145" rx="285" ry="128" fill="url(#glow)"/>
-  <g transform="translate(52 58)"><rect width="52" height="52" rx="14" fill="#087cff"/>
-    <g fill="none" stroke="white" stroke-width="2.8"><rect x="9" y="14" width="23" height="17" rx="5"/><rect x="20" y="21" width="23" height="17" rx="5"/></g>
+  <g clip-path="url(#outer)">
+    <rect width="1120" height="368" fill="url(#field)"/>
+    <ellipse cx="833" cy="135" rx="362" ry="225" fill="url(#aura)"/>
+    <ellipse cx="832" cy="298" rx="135" ry="13" fill="#435e8b" opacity=".28" filter="url(#soft)" transform="rotate(-6 832 298)"/>
+    <g transform="translate(816 171) rotate(-17) skewX(8)"><g ><g fill="none" stroke-linejoin="round"><use href="#r2" xlink:href="#r2" stroke="url(#paleSide)" stroke-width="35" transform="translate(3 13)"/><use href="#r2" xlink:href="#r2" stroke="url(#paleSide)" stroke-width="35" transform="translate(1.5 7)"/><use href="#r2" xlink:href="#r2" stroke="url(#pale)" stroke-width="35"/><use href="#r2" xlink:href="#r2" stroke="#fff" stroke-width="1.5" opacity=".42" transform="translate(-7 -13)"/></g></g><g ><g fill="none" stroke-linejoin="round"><use href="#r1" xlink:href="#r1" stroke="url(#blueSide)" stroke-width="35" transform="translate(3 13)"/><use href="#r1" xlink:href="#r1" stroke="url(#blueSide)" stroke-width="35" transform="translate(1.5 7)"/><use href="#r1" xlink:href="#r1" stroke="url(#blue)" stroke-width="35"/><use href="#r1" xlink:href="#r1" stroke="#d2f6ff" stroke-width="1.5" opacity=".42" transform="translate(-7 -13)"/></g></g><g clip-path="url(#cross)"><g ><g fill="none" stroke-linejoin="round"><use href="#r2" xlink:href="#r2" stroke="url(#paleSide)" stroke-width="35" transform="translate(3 13)"/><use href="#r2" xlink:href="#r2" stroke="url(#paleSide)" stroke-width="35" transform="translate(1.5 7)"/><use href="#r2" xlink:href="#r2" stroke="url(#pale)" stroke-width="35"/><use href="#r2" xlink:href="#r2" stroke="#fff" stroke-width="1.5" opacity=".42" transform="translate(-7 -13)"/></g></g></g></g>
+    <g transform="translate(59 50)" fill="none">
+      <rect width="33" height="33" rx="9" fill="#087aff"/>
+      <g stroke="#fff" stroke-width="1.9"><rect x="6" y="8" width="14" height="11" rx="3.5"/><rect x="13" y="13" width="14" height="11" rx="3.5"/></g>
+    </g>
+    <g font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif">
+      <text x="104" y="74" fill="#263346" font-size="19" font-weight="600" letter-spacing="5.5">BTWN</text>
+      <text x="55" y="174" fill="#111827" font-size="69" font-weight="600" letter-spacing="-3.3">Pick up on</text>
+      <text x="55" y="244" fill="#0756bd" font-size="69" font-weight="600" letter-spacing="-3.3">your other PC.</text>
+      <text x="60" y="305" fill="#495a71" font-size="21" font-weight="400">Local Codex projects, chats, and files.</text>
+    </g>
   </g>
-  <g font-family="Segoe UI,Arial,sans-serif">
-    <text x="122" y="98" font-size="43" letter-spacing="7" fill="#f7faff">BTWN</text>
-    <text x="52" y="168" font-size="30" fill="#f1f6ff">Sync local Codex projects.</text>
-    <text x="54" y="207" font-size="19" fill="#bdd0e4">PC to PC, over Wi-Fi or wired LAN.</text>
-  </g>
-  <g fill="url(#screen)" stroke="#cee5ff" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="628" y="97" width="116" height="72" rx="8"/>
-    <path d="M686 170v13m-21 3h42" fill="none"/>
-    <rect x="925" y="97" width="116" height="72" rx="8"/>
-    <path d="M983 170v13m-21 3h42" fill="none"/>
-  </g>
-  <g stroke="#86c1ff" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M773 127h124l-9-8m9 8-9 8M898 149H774l9-8m-9 8 9 8"/>
-  </g>
+  <rect x=".5" y=".5" width="1119" height="367" rx="28" fill="none" stroke="#dce4ef"/>
 </svg>

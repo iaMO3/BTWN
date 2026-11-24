@@ -1,12 +1,26 @@
-![BTWN for Windows — PC-to-PC sync for local Codex projects](assets/btwn-cover.svg)
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/btwn-cover-dark.svg">
+    <img src="assets/btwn-cover.svg" width="1120" alt="BTWN — Pick up on your other PC. Local Codex projects, chats, and files.">
+  </picture>
+</h1>
 
-# BTWN
+**Sync local Codex projects between two Windows PCs.** Send your saved chats, working files, and sidebar layout over Wi-Fi or wired LAN. Once BTWN confirms the transfer, you can keep working with the other PC offline.
 
-**PC-to-PC sync for local Codex projects.** Open a project on your other Windows PC and pick up at the last saved message, with its files and Codex sidebar organized the way you left them. Either PC can send or receive over private Wi-Fi or wired LAN. Once the receiving PC confirms the sync, the other PC can go offline.
+<p align="center">
+  <a href="https://github.com/iaMO3/BTWN/releases/latest"><img src="assets/download-windows.svg" width="246" alt="Download BTWN for Windows x64"></a>
+</p>
 
-[![Download BTWN for Windows x64](assets/download-windows.svg)](https://github.com/iaMO3/BTWN/releases/latest)
+<p align="center"><a href="#first-time-setup">Quick start</a> &nbsp;·&nbsp; <a href="#what-btwn-syncs">Features</a> &nbsp;·&nbsp; <a href="#troubleshooting">Troubleshooting</a></p>
 
-[First-time setup](#first-time-setup) · [Features](#what-btwn-syncs) · [Controls](#sync-controls) · [Settings](#settings) · [Troubleshooting](#troubleshooting)
+## Inside BTWN
+
+<p align="center">
+  <a href="assets/dashboard.webp"><img src="assets/dashboard.webp" width="365" alt="BTWN's light dashboard with Studio PC and Travel PC connected, Send selected and project files included."></a>
+  <a href="assets/device-settings.webp"><img src="assets/device-settings.webp" width="365" alt="BTWN's dark device settings with a name field, device type and five icon choices."></a>
+</p>
+
+The dashboard and settings previews use example device names. Select either image for a closer look.
 
 ## First-time setup
 
@@ -38,6 +52,13 @@ Project scans skip linked folders and common generated or private files, includi
 | **Automatic** | You work on both PCs. BTWN checks both directions about every two minutes while it is open and the PCs can reach each other. Divergent chat histories are kept for review. |
 
 **Watch or pause from either PC.** The dashboard shows the paired device names, connection state, and transfer direction. Both PCs use the receiver's reported progress. When a stage has a known total, both show its percentage. **Pause sync** pauses the pair. **Resume sync** continues the selected mode.
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/transfer-progress-mobile.webp">
+    <img src="assets/transfer-progress.webp" width="960" alt="Example transfer. Studio PC is sending to Travel PC. Both BTWN windows show 75 percent.">
+  </picture>
+</p>
 
 ### What happens during a sync
 
