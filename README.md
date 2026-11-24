@@ -149,4 +149,4 @@ The MSI is written to `target\installer` under the Cargo target directory. The w
 
 ## License
 
-BTWN is free and open source under the [MIT License](LICENSE.txt). You can use, modify, and redistribute it, including commercially, with the copyright and license notice. Dependencies and the website's Geist typeface retain their own licenses. BTWN is an independent project and is unaffiliated with OpenAI. [Bundled notices](installer/notices/) · [Geist font license](docs/media/Geist-LICENSE.txt)
+BTWN is free and open source under the [MIT License](LICENSE.txt). You can use, modify, and redistribute it, including commercially, with the copyright and license notice. Dependencies and the website's Geist typeface retain their own licenses. BTWN is an independent project· [Geist font license](docs/media/Geist-LICENSE.txt)
