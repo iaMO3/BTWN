@@ -388,6 +388,63 @@ h1,h2,h3,p {
   color:#eeedf9;
 }
 
+.particles {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+
+.particles .cyan-dust {
+  color:#8beaff;
+  fill:url(#spark-cyan);
+  --flight-time:8s;
+  --flight-x:68px;
+  --flight-y:-44px;
+}
+
+.particles .violet-dust {
+  color:#c3a7ff;
+  fill:url(#spark-violet);
+  --flight-time:11s;
+  --flight-x:45px;
+  --flight-y:-68px;
+}
+
+.particles use {
+  fill:currentColor;
+}
+
+.particles g > * {
+  opacity:.65;
+}
+
+.enhanced .particles g > * {
+  animation:particle-flight var(--flight-time) ease-in-out infinite;
+  animation-delay:var(--start, -3s);
+  animation-play-state:var(--flow);
+}
+
+.particles g > :nth-child(2n) {
+  --start:-5.8s;
+}
+
+.particles g > :nth-child(3n) {
+  --start:-1.4s;
+}
+
+.particles g > :nth-child(4n) {
+  --start:-7.1s;
+}
+
+@keyframes particle-flight {
+  0% { opacity:0; transform:translate(-15px, 12px); }
+  24% { opacity:.85; }
+  68% { opacity:.6; }
+  100% { opacity:0; transform:translate(var(--flight-x), var(--flight-y)); }
+}
+
 .device-tag {
   display:flex;
   align-items:center;
@@ -863,8 +920,11 @@ footer a:hover {
 }
 
 :root[data-motion="off"] * {
-  animation-duration:0s!important;
   transition:none!important;
+}
+
+:root[data-motion="off"] .tour-stage article {
+  animation:none!important;
 }
 
 :root[data-motion="off"] .sculpture {
@@ -1132,6 +1192,9 @@ footer a:hover {
 }
 
 @media(prefers-reduced-motion:reduce) {
+  .particles {
+    display:none;
+  }
   :root {
     scroll-behavior:auto;
     --flow:paused;

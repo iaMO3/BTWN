@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#08090f">
-  <title>BTWN â€” PC-to-PC sync for local Codex projects</title>
+  <title>BTWN &mdash; PC-to-PC sync for local Codex projects</title>
   <meta name="description" content="Pick up your local Codex projects on another Windows PC. BTWN syncs saved chats, files, and your sidebar over a private network. Free and open source.">
   <link rel="canonical" href="https://iamo3.github.io/BTWN/">
-  <meta property="og:title" content="BTWN â€” Two PCs. One workspace.">
+  <meta property="og:title" content="BTWN &mdash; Two PCs. One workspace.">
   <meta property="og:description" content="Local Codex projects, chats, and files. Yours to carry between Windows PCs.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://iamo3.github.io/BTWN/media/hero.webp">
   <link rel="icon" type="image/svg+xml" href="./media/mark.svg">
   <link rel="preload" href="./media/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./media/hero.webp" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css?v=c291f0003e">
   <script src="./showcase.js" defer></script>
 </head>
 <body id="top">
@@ -46,12 +46,29 @@
         <p>Pick up your local Codex projects on either Windows PC. Your chats, files, and sidebar travel together over your own network.</p>
         <div class="hero-actions">
           <a class="primary" href="https://github.com/iaMO3/BTWN/releases/download/v1.1.2/BTWN-1.1.2-Setup-x64.msi"><svg class="icon"><use href="#windows"/></svg> Download for Windows</a>
-          <a class="text-link" href="#product">Explore the app <span aria-hidden="true">â†“</span></a>
+          <a class="text-link" href="#product">Explore the app <span aria-hidden="true">&darr;</span></a>
         </div>
-        <div class="platform">Windows x64 <b>Â·</b> Free under the MIT license</div>
+        <div class="platform">Windows x64 <b aria-hidden="true">&middot;</b> Free under the MIT license</div>
       </div>
       <div class="art-stage">
         <div class="halo"></div><div class="sculpture"><img src="./media/hero.webp" width="1448" height="1086" fetchpriority="high" alt="Two interlocking sculpted glass links, one ice blue and one violet."></div>
+        <svg class="particles" viewBox="0 0 560 400" aria-hidden="true" focusable="false">
+          <defs>
+            <radialGradient id="spark-cyan"><stop stop-color="#fff"/><stop offset=".22" stop-color="#8beaff"/><stop offset="1" stop-color="#8beaff" stop-opacity="0"/></radialGradient>
+            <radialGradient id="spark-violet"><stop stop-color="#fff"/><stop offset=".22" stop-color="#c3a7ff"/><stop offset="1" stop-color="#c3a7ff" stop-opacity="0"/></radialGradient>
+            <path id="glint" d="M-6 2.4Q-.8.4 0-3Q.2-.6 5.5-1.9Q1.3.1 0 3.6Q.1.7-6 2.4Z"/>
+          </defs>
+          <g class="cyan-dust">
+            <circle cx="56" cy="238" r="3.2"/><circle cx="165" cy="111" r="2.5"/><use href="#glint" x="65" y="306"/>
+            <circle cx="222" cy="346" r="4"/><circle cx="116" cy="190" r="2.8"/><circle cx="21" cy="270" r="3"/>
+            <circle cx="288" cy="77" r="2.4"/><use href="#glint" x="239" y="284"/>
+          </g>
+          <g class="violet-dust">
+            <circle cx="495" cy="178" r="4"/><use href="#glint" x="440" y="74"/><circle cx="350" cy="310" r="3"/>
+            <circle cx="411" cy="105" r="2.4"/><circle cx="463" cy="255" r="3.8"/><circle cx="321" cy="46" r="2.8"/>
+            <use href="#glint" x="524" y="201"/><circle cx="365" cy="232" r="2.7"/>
+          </g>
+        </svg>
         <div class="device-tag studio"><span class="pin"></span> Studio PC</div>
         <div class="device-tag travel"><span class="pin"></span> Travel PC</div>
         <button class="motion" type="button" hidden aria-label="Pause visual motion" title="Pause visual motion"><svg class="icon"><use href="#pause"/></svg></button>
@@ -68,9 +85,9 @@
       <div class="showcase">
         <div class="tour-menu">
           <div class="tour-tabs" role="tablist" aria-label="App preview" aria-orientation="vertical">
-            <button id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview"><svg class="icon"><use href="#monitor"/></svg>Dashboard <span>â†—</span></button>
-            <button id="tab-transfer" role="tab" aria-selected="false" aria-controls="panel-transfer" tabindex="-1"><svg class="icon"><use href="#waves"/></svg>Transfer preview <span>â†—</span></button>
-            <button id="tab-devices" role="tab" aria-selected="false" aria-controls="panel-devices" tabindex="-1"><svg class="icon"><use href="#layers"/></svg>Device settings <span>â†—</span></button>
+            <button id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview"><svg class="icon"><use href="#monitor"/></svg>Dashboard <span aria-hidden="true">&nearr;</span></button>
+            <button id="tab-transfer" role="tab" aria-selected="false" aria-controls="panel-transfer" tabindex="-1"><svg class="icon"><use href="#waves"/></svg>Transfer preview <span aria-hidden="true">&nearr;</span></button>
+            <button id="tab-devices" role="tab" aria-selected="false" aria-controls="panel-devices" tabindex="-1"><svg class="icon"><use href="#layers"/></svg>Device settings <span aria-hidden="true">&nearr;</span></button>
           </div>
           <a class="guide-link" href="https://github.com/iaMO3/BTWN#what-btwn-syncs">Full feature guide <svg class="icon"><use href="#external"/></svg></a>
         </div>
