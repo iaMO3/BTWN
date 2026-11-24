@@ -1,0 +1,8 @@
+# The public repository contains documentation only. Publish binaries through Releases.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE.txt
+!/assets/
+/assets/*
+!/assets/btwn-cover.svg

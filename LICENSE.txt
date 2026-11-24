@@ -1,0 +1,15 @@
+BTWN software license
+Copyright 2026 iaMO3. All rights reserved.
+
+You may download the official release of BTWN and install and use it free
+of charge on computers you own or are authorized to operate, including
+for work. You may share the link to the official GitHub release.
+
+The author reserves all other rights, including modification,
+redistribution of the software, and sublicensing, except as otherwise
+provided by applicable law. Third-party components remain governed by
+their respective licenses. This license does not restrict any rights
+granted under those licenses.
+
+The software is provided as is, without warranty to the extent
+permitted by applicable law.

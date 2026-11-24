@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 270" role="img" aria-labelledby="title desc">
+  <title id="title">BTWN for Windows</title>
+  <desc id="desc">A desktop and a laptop exchanging local Codex chats over Wi-Fi.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2=".28" gradientUnits="objectBoundingBox">
+      <stop stop-color="#101825"/><stop offset=".6" stop-color="#132940"/><stop offset="1" stop-color="#153653"/>
+    </linearGradient>
+    <radialGradient id="glow"><stop stop-color="#3c92f5" stop-opacity=".25"/><stop offset="1" stop-color="#3c92f5" stop-opacity="0"/></radialGradient>
+    <linearGradient id="screen" x2="1" y2="1"><stop stop-color="#23476e"/><stop offset="1" stop-color="#142438"/></linearGradient>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#8ebde8" opacity=".16"/></pattern>
+  </defs>
+  <rect width="1120" height="270" rx="20" fill="url(#bg)"/>
+  <rect x="558" width="549" height="266" rx="18" fill="url(#grid)"/>
+  <ellipse cx="820" cy="145" rx="285" ry="128" fill="url(#glow)"/>
+  <g transform="translate(52 58)"><rect width="52" height="52" rx="14" fill="#087cff"/>
+    <g fill="none" stroke="white" stroke-width="2.8"><rect x="9" y="14" width="23" height="17" rx="5"/><rect x="20" y="21" width="23" height="17" rx="5"/></g>
+  </g>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="122" y="98" font-size="43" letter-spacing="7" fill="#f7faff">BTWN</text>
+    <text x="52" y="168" font-size="30" fill="#f1f6ff">Take your Codex chats with you.</text>
+    <text x="54" y="207" font-size="19" fill="#bdd0e4">Desktop to laptop, over your local network.</text>
+  </g>
+  <g fill="url(#screen)" stroke="#cee5ff" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="628" y="97" width="116" height="72" rx="8"/>
+    <path d="M686 170v13m-21 3h42" fill="none"/>
+    <rect x="931" y="101" width="99" height="62" rx="6"/>
+    <path d="M930 166h101l11 12H920z"/>
+  </g>
+  <g stroke="#86c1ff" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M773 127h124l-9-8m9 8-9 8M898 149H774l9-8m-9 8 9 8"/>
+  </g>
+</svg>
