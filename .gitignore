@@ -1,14 +1,37 @@
-# The public repository contains documentation only. Publish binaries through Releases.
+# Publish only the app source, distribution inputs, documentation, and website.
 /*
 !/.gitignore
 !/README.md
 !/LICENSE.txt
+!/Cargo.toml
+!/Cargo.lock
+!/build.rs
+!/src/
+/src/*
+!/src/*.rs
+!/installer/
+/installer/*
+!/installer/BTWN.wxs
+!/installer/build-setup.ps1
+!/installer/notices.py
+!/installer/Quick Start.md
+!/installer/notices/
+/installer/notices/*
+!/installer/notices/Third-party notices.txt
+!/installer/notices/Rust-library-notices.html
 !/assets/
 /assets/*
-!/assets/btwn-cover.svg
-!/assets/btwn-cover-dark.svg
-!/assets/download-windows.svg
-!/assets/dashboard.webp
-!/assets/device-settings.webp
-!/assets/transfer-progress.webp
-!/assets/transfer-progress-mobile.webp
+!/assets/*.svg
+!/assets/*.webp
+!/docs/
+/docs/*
+!/docs/.nojekyll
+!/docs/index.html
+!/docs/style.css
+!/docs/showcase.js
+!/docs/media/
+/docs/media/*
+!/docs/media/*.webp
+!/docs/media/mark.svg
+!/docs/media/geist.woff2
+!/docs/media/Geist-LICENSE.txt

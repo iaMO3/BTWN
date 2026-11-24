@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:fire="http://schemas.microsoft.com/wix/FirewallExtension">
+  <Product Id="{AED8FD91-226D-4B05-B7D0-F227650C47D3}" Name="BTWN"
+           Language="1033" Version="$(var.ProductVersion)" Manufacturer="BTWN"
+           UpgradeCode="{6EAF2F0F-01F5-4903-A1D5-7D83B9C6BD1A}">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+    <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="A newer version of BTWN is already installed." />
+    <!-- Public 1.x versions replace the 4.2 and 4.3 preview installers. -->
+    <Upgrade Id="{9A4F3BF1-1EFE-4FDB-B159-65E4D47CBC01}">
+      <UpgradeVersion Minimum="4.2.0" IncludeMinimum="yes" Maximum="4.3.0" IncludeMaximum="yes" Property="BTWN_PREVIEW_PRODUCTS" />
+    </Upgrade>
+    <MediaTemplate EmbedCab="yes" CompressionLevel="high" />
+    <Icon Id="BTWN.ico" SourceFile="$(var.AppIcon)" />
+    <Property Id="ARPPRODUCTICON" Value="BTWN.ico" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT"
+              Value="Close any portable copy of BTWN, then open BTWN from the Windows Start menu." />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramMenuFolder" />
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="INSTALLFOLDER" Name="BTWN">
+          <Component Id="Application" Guid="{51946BDF-5BE0-41DA-A547-4D2CF20A5C0B}" Win64="yes">
+            <File Id="BtwnExe" Name="BTWN.exe" Source="$(var.ExeSource)" KeyPath="yes">
+              <Shortcut Id="StartMenuShortcut" Directory="ProgramMenuFolder" Name="BTWN"
+                        WorkingDirectory="INSTALLFOLDER" Advertise="yes" Icon="BTWN.ico" />
+            </File>
+          </Component>
+          <Component Id="QuickStart" Guid="{F5B98432-BB74-430F-B3F2-A8795BD16E92}" Win64="yes">
+            <File Id="Guide" Source="$(var.Guide)" KeyPath="yes" />
+            <File Id="SoftwareLicense" Source="$(var.License)" />
+            <File Id="DependencyNotices" Source="$(var.Notices)\Third-party notices.txt" />
+            <File Id="ToolchainNotices" Source="$(var.Notices)\Rust-library-notices.html" />
+          </Component>
+          <Component Id="DesktopListener" Guid="{0760E45D-8791-47ED-8769-C11D4AB52160}" Win64="yes">
+            <RegistryValue Root="HKLM" Key="Software\BTWN\Setup" Name="DesktopListener"
+                           Type="integer" Value="1" KeyPath="yes" />
+            <fire:FirewallException Id="LocalDiscovery" Name="BTWN installed app - local discovery"
+                                    File="BtwnExe" Port="53328" Protocol="udp" Profile="private" Scope="localSubnet" />
+            <fire:FirewallException Id="LocalTransfer" Name="BTWN installed app - local transfer"
+                                    File="BtwnExe" Port="53328" Protocol="tcp" Profile="private" Scope="localSubnet" />
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+    <Feature Id="BTWN" Title="BTWN" Level="1" Absent="disallow" Display="hidden">
+      <ComponentRef Id="Application" />
+      <ComponentRef Id="QuickStart" />
+      <ComponentRef Id="DesktopListener" />
+    </Feature>
+
+    <UIRef Id="WixUI_InstallDir" />
+    <UI>
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg" Order="10">NOT Installed AND NOT PATCH</Publish>
+      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="10">NOT Installed AND NOT PATCH</Publish>
+    </UI>
+  </Product>
+</Wix>

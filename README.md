@@ -11,7 +11,7 @@
   <a href="https://github.com/iaMO3/BTWN/releases/latest"><img src="assets/download-windows.svg" width="246" alt="Download BTWN for Windows x64"></a>
 </p>
 
-<p align="center"><a href="#first-time-setup">Quick start</a> &nbsp;·&nbsp; <a href="#what-btwn-syncs">Features</a> &nbsp;·&nbsp; <a href="#troubleshooting">Troubleshooting</a></p>
+<p align="center"><a href="https://iamo3.github.io/BTWN/">Product website</a> &nbsp;·&nbsp; <a href="#first-time-setup">Quick start</a> &nbsp;·&nbsp; <a href="#what-btwn-syncs">Features</a> &nbsp;·&nbsp; <a href="#build-from-source">Build from source</a></p>
 
 ## Inside BTWN
 
@@ -123,6 +123,30 @@ Include the BTWN and Codex versions on both PCs, the sync direction, and the exa
 
 </details>
 
+## Build from source
+
+This repository contains the Rust desktop app, its sync and recovery engine, the Windows MSI installer, and the GitHub Pages website. BTWN uses the Codex desktop app already installed on each PC to read its saved local conversations.
+
+On Windows x64, install Rust with rustup and the MSYS2 UCRT64 GCC toolchain, including `gcc` and `windres`. In PowerShell, from the repository root:
+
+```powershell
+rustup toolchain install stable-x86_64-pc-windows-gnu
+$env:RUSTUP_TOOLCHAIN = 'stable-x86_64-pc-windows-gnu'
+$env:Path = 'C:\msys64\ucrt64\bin;' + $env:Path
+cargo build --release --locked
+cargo test --release --locked
+```
+
+Launch `target\release\between.exe`. Adjust the MSYS2 path if you installed it elsewhere. The default suite uses temporary test data. The optional native restore test additionally needs the installed Codex app and a compatible disposable fixture supplied through `BETWEEN_RESTORE_SOURCE`.
+
+To produce the MSI, install WiX Toolset 3.14.1 and point the packaging script at the directory containing `candle.exe` and `light.exe`. It builds the app and bundles the icon, quick-start guide, license, and third-party notices.
+
+```powershell
+.\installer\build-setup.ps1 -WixTools 'C:\Program Files (x86)\WiX Toolset v3.14\bin'
+```
+
+The MSI is written to `target\installer` under the Cargo target directory. The website is static HTML, CSS, and JavaScript served by GitHub Pages from [docs/](docs/). The desktop source is in [src/](src/) and the packaging scripts are in [installer/](installer/).
+
 ## License
 
-BTWN is free to install and use. The author retains all other rights. Third-party components retain their own licenses, included with the installer. BTWN is an independent app and is unaffiliated with OpenAI. [Software license](LICENSE.txt)
+BTWN is free and open source under the [MIT License](LICENSE.txt). You can use, modify, and redistribute it, including commercially, with the copyright and license notice. Dependencies and the website's Geist typeface retain their own licenses. BTWN is an independent project and is unaffiliated with OpenAI. [Bundled notices](installer/notices/) · [Geist font license](docs/media/Geist-LICENSE.txt)

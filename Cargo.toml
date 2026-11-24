@@ -1,0 +1,33 @@
+[package]
+name = "between"
+version = "1.1.2"
+license = "MIT"
+repository = "https://github.com/iaMO3/BTWN"
+description = "PC-to-PC sync for local Codex projects on Windows"
+edition = "2024"
+publish = false
+
+[dependencies]
+anyhow = "1"
+eframe = { version = "=0.33.3", default-features = false, features = ["default_fonts", "glow", "x11"] }
+regex = "1"
+rcgen = "0.13.2"
+raw-window-handle = "0.6"
+rfd = { version = "0.15", default-features = false }
+ring = "0.17"
+rusqlite = { version = "0.37", features = ["backup", "bundled"] }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+rustls-pemfile = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tempfile = "3"
+time = { version = "0.3", features = ["formatting", "macros", "parsing"] }
+uuid = { version = "1", features = ["v4"] }
+walkdir = "2"
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_Graphics_Dwm", "Win32_UI_Accessibility", "Win32_UI_WindowsAndMessaging", "Win32_Storage_FileSystem", "Win32_System_ProcessStatus", "Win32_System_Threading", "Win32_System_Diagnostics_ToolHelp", "Win32_System_IO"] }
+zip = { version = "4.6", default-features = false, features = ["deflate"] }
+zstd = "0.13"
+
+[profile.release]
+strip = true
